@@ -3,5 +3,20 @@
         <file>img/background.jpg</file>
         <file>img/main_menu.jpg</file>
         <file>img/select.png</file>
+        <file>img/name_border1.png</file>
+        <file>img/name_border2.png</file>
+        <file>img/name_border3.png</file>
+        <file>img/return.png</file>
+        <file>img/game.jpg</file>
+        <file>img/cross1.png</file>
+        <file>img/cross2.png</file>
+        <file>img/cross3.png</file>
+        <file>img/cross4.png</file>
+        <file>img/round1.png</file>
+        <file>img/round2.png</file>
+        <file>img/round3.png</file>
+        <file>img/round4.png</file>
+        <file>img/round5.png</file>
+        <file>img/cross5.png</file>
     </qresource>
 </RCC>
