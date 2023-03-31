@@ -1,12 +1,62 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include <functional>
 #include <QMainWindow>
 #include "invisible_button.h"
+#include "TicTacToe.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
+
+
+class TicTacToe_GUI_c: public TicTacToe_c
+{
+public:
+    TicTacToe_GUI_c(std::string player1_name, std::string player2_name, uint16_t rounds, bool multiplayer)
+        : TicTacToe_c(player1_name, player2_name, rounds, multiplayer)
+    {
+
+    }
+
+    void increment_score(uint8_t player)
+    {
+        if(player == 0) m_player1_score++;
+        else if(player == 1) m_player2_score++;
+    }
+
+    void set_first_player(uint8_t player)
+    {
+        m_first_player = player;
+    }
+
+    void set_rounds(uint16_t rounds)
+    {
+        m_rounds = rounds;
+    }
+
+    uint8_t get_first_player() const
+    {
+        return m_first_player;
+    }
+
+    virtual void start() override
+    {
+
+    }
+protected:
+    virtual int wait_for_player1() override
+    {
+        return 0xFF;
+    }
+
+    virtual int wait_for_player2() override
+    {
+        return 0xFF;
+    }
+};
+
 
 class MainWindow : public QMainWindow
 {
@@ -43,8 +93,15 @@ private slots:
 
     void on_m_pushButton_9_clicked();
 
-
     void on_m_button_start_return_2_clicked();
+
+    void update_game();
+
+    void round_ended(int);
+
+signals:
+    void player_played();
+    void end_of_round(int);
 
 private:
     void pushButton_clicked(int cell);
@@ -52,5 +109,7 @@ private:
     Ui::MainWindow *ui;
     QPushButton* m_cells[9];
     uint8_t m_turn;
+    bool m_multiplayer;
+    TicTacToe_GUI_c *m_game;
 };
 #endif // MAINWINDOW_H

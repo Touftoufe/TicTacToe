@@ -20,6 +20,8 @@ set(PROJECT_SOURCES
         images.qrc
         invisible_button.h
         invisible_button.cpp
+        TicTacToe.h
+        TicTacToe.cpp
 )
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})

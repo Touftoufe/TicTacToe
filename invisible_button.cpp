@@ -3,7 +3,7 @@
 invisible_button_c::invisible_button_c(QWidget *parent):QPushButton(parent)
 {
     setAttribute(Qt::WA_Hover);
-    m_sel = std::unique_ptr<QFrame>(new QFrame(parent));
+    m_sel = new QFrame(parent);
     m_sel->setObjectName("m_sel");
     m_sel->setEnabled(true);
     m_sel->setGeometry(QRect(0, 0, 91, 71));

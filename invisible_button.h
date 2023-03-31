@@ -15,7 +15,7 @@ public:
 
 protected:
     virtual bool event(QEvent * e) override;
-    std::unique_ptr<QFrame> m_sel;
+    QFrame* m_sel;
 };
 
 #endif // INVISIBLE_BUTTON_C_H

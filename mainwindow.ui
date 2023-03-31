@@ -341,14 +341,11 @@
        <property name="styleSheet">
         <string notr="true">.QLineEdit {selection-background-color: transparent; background: transparent; border: none; outline: none; border-image: url(:/img/name_border3.png); color: #ffe486; padding-left: 20px;}</string>
        </property>
-       <property name="text">
-        <string/>
-       </property>
        <property name="maxLength">
-        <number>5</number>
+        <number>1</number>
        </property>
-       <property name="placeholderText">
-        <string notr="true"/>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
        </property>
       </widget>
       <widget class="invisible_button_c" name="m_button_start_return">
@@ -543,6 +540,211 @@
         </property>
         <property name="text">
          <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="m_label_player_2_score">
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>370</y>
+          <width>211</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Colored Crayons</family>
+          <pointsize>19</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Player II</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="m_label_player_1_score">
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>240</y>
+          <width>211</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Colored Crayons</family>
+          <pointsize>19</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Player I</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="m_label_player_1_score_2">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>300</y>
+          <width>261</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Colored Crayons</family>
+          <pointsize>19</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>I I I I I</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="m_label_player_2_score_2">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>430</y>
+          <width>261</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Colored Crayons</family>
+          <pointsize>19</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>I I I I I</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QFrame" name="m_frame_player_1_icon">
+        <property name="geometry">
+         <rect>
+          <x>43</x>
+          <y>250</y>
+          <width>40</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">.QFrame {background: transparent; border: none; outline: none; border-image: url(:/img/round1.png);}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+       </widget>
+       <widget class="QFrame" name="m_frame_player_2_icon">
+        <property name="geometry">
+         <rect>
+          <x>44</x>
+          <y>380</y>
+          <width>41</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">.QFrame {background: transparent; border: none; outline: none; border-image: url(:/img/cross3.png);}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+       </widget>
+       <widget class="QFrame" name="m_frame_separator">
+        <property name="geometry">
+         <rect>
+          <x>37</x>
+          <y>350</y>
+          <width>251</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">.QFrame {background: transparent; border: none; outline: none; border-image: url(:/img/separator.png);}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+       </widget>
+       <widget class="QFrame" name="m_frame_player_2_winner">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>330</y>
+          <width>311</width>
+          <height>151</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">.QFrame {background: transparent; border: none; outline: none; border-image: url(:/img/winner_cross.png);}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+       </widget>
+       <widget class="QFrame" name="m_frame_player_1_winner">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>200</y>
+          <width>311</width>
+          <height>151</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">.QFrame {background: transparent; border: none; outline: none; border-image: url(:/img/winner_circle.png);}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+       </widget>
+       <widget class="QLabel" name="m_label_rounds_left">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>560</y>
+          <width>241</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Eraser</family>
+          <pointsize>19</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Rounds left: </string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
         </property>
        </widget>
       </widget>

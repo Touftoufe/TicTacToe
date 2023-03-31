@@ -18,5 +18,8 @@
         <file>img/round4.png</file>
         <file>img/round5.png</file>
         <file>img/cross5.png</file>
+        <file>img/separator.png</file>
+        <file>img/winner_cross.png</file>
+        <file>img/winner_circle.png</file>
     </qresource>
 </RCC>
