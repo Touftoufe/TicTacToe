@@ -2,6 +2,7 @@
 #include "./ui_mainwindow.h"
 #include <QRegularExpressionValidator>
 #include <QRandomGenerator>
+#include <QGraphicsOpacityEffect>
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -46,7 +47,6 @@ MainWindow::MainWindow(QWidget *parent)
     ui->m_frame_game->setHidden(true);
     QObject::connect(this, &MainWindow::player_played, this, &MainWindow::update_game);
     QObject::connect(this, &MainWindow::end_of_round, this, &MainWindow::round_ended);
-
 }
 
 MainWindow::~MainWindow()

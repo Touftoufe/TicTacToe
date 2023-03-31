@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(test2 VERSION 0.1 LANGUAGES CXX)
+project(TicTacToe_GUI VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
@@ -27,31 +27,31 @@ set(PROJECT_SOURCES
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
-    qt_add_executable(test2
+    qt_add_executable(TicTacToe_GUI
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
     )
 # Define target properties for Android with Qt 6 as:
-#    set_property(TARGET test2 APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
+#    set_property(TARGET TicTacToe_GUI APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
 #                 ${CMAKE_CURRENT_SOURCE_DIR}/android)
 # For more information, see https://doc.qt.io/qt-6/qt-add-executable.html#target-creation
 else()
     if(ANDROID)
-        add_library(test2 SHARED
+        add_library(TicTacToe_GUI SHARED
             ${PROJECT_SOURCES}
         )
 # Define properties for Android with Qt 5 after find_package() calls as:
 #    set(ANDROID_PACKAGE_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/android")
     else()
-        add_executable(test2
+        add_executable(TicTacToe_GUI
             ${PROJECT_SOURCES}
         )
     endif()
 endif()
 
-target_link_libraries(test2 PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+target_link_libraries(TicTacToe_GUI PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 
-set_target_properties(test2 PROPERTIES
+set_target_properties(TicTacToe_GUI PROPERTIES
     MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com
     MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
     MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
@@ -59,10 +59,10 @@ set_target_properties(test2 PROPERTIES
     WIN32_EXECUTABLE TRUE
 )
 
-install(TARGETS test2
+install(TARGETS TicTacToe_GUI
     BUNDLE DESTINATION .
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR})
 
 if(QT_VERSION_MAJOR EQUAL 6)
-    qt_finalize_executable(test2)
+    qt_finalize_executable(TicTacToe_GUI)
 endif()
